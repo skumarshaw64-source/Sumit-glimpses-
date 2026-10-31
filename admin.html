@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin — Sumit Glimpses</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎞%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css"></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="logo" viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4fa3"/><stop offset=".55" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+<circle cx="32" cy="32" r="29" fill="none" stroke="url(#lg)" stroke-width="4"/>
+<path d="M44 20c-3-4-9-6-14-4-6 2-7 9-2 12l9 4c5 3 4 10-2 12-5 2-11 0-14-4" fill="none" stroke="url(#lg)" stroke-width="5" stroke-linecap="round"/>
+<path d="M26 24l16 8-16 8z" fill="#fff" opacity=".0"/><circle cx="50" cy="14" r="4" fill="#fff"/><path d="M50 8v12M44 14h12" stroke="#fff" stroke-width="1.5"/></symbol></defs></svg>
+
+<nav><div class="brand"><svg width="38" height="38"><use href="#logo"/></svg><span>Sumit Glimpses</span></div>
+<div><a class="k" href="index.html">← Client site</a><a class="k hide" id="out" href="#">Lock &amp; logout</a></div></nav>
+<section id="gate"><div class="portal" style="text-align:center"><h2 id="gt">🔒 Admin locked</h2><p class="sub" id="gs">Only Sumit. Enter the admin Gmail and password.</p><input id="em" type="email" placeholder="Admin Gmail" autocomplete="username" style="max-width:320px;text-align:center"><br><input id="pw" type="password" style="margin-top:8px" placeholder="Password" autocomplete="current-password" style="max-width:320px;text-align:center"><br><input id="pw2" class="hide" type="password" placeholder="Type the password again" autocomplete="new-password" style="max-width:320px;text-align:center;margin-top:8px"><br><button class="btn" id="ug" style="margin-top:8px">Unlock</button><p class="msg" id="gmsg"></p></div></section>
+<section id="panel" class="hide"><div class="portal">
+<h2>🛠 Admin — Sumit only</h2><p class="sub">Add a video, set your own price, approve payments.</p>
+<div class="row"><input id="an" placeholder="Client name"><input id="ap" type="number" min="1" placeholder="Price ₹"><input id="af" type="file" accept="video/*"></div>
+<button class="btn" id="add">Upload &amp; create code</button> <span class="msg" id="amsg">Upload the edited video, set the price, then send the code to your client.</span>
+<div class="tw"><table><thead><tr><th>Code</th><th>Client</th><th>₹</th><th>Status</th><th>UTR</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+<h3 style="margin-top:22px">My samples (shown on the client site)</h3>
+<div class="row"><input id="st" placeholder="Sample title"><input id="sf" type="file" accept="video/*,image/*"></div>
+<button class="btn" id="sadd">Add sample</button> <span class="msg" id="smsg"></span>
+<div id="slist" style="margin-top:12px"></div>
+<h3 style="margin-top:22px">Feedback received</h3><div id="fbs" class="msg">None yet.</div>
+</div></section>
+<footer><p>Sumit Glimpses admin · <a href="index.html" style="color:var(--mu)">View client site</a></p></footer>
+<script src="common.js"></script>
+<script src="admin.js"></script></body></html>

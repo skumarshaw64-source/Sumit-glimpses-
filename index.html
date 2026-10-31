@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sumit Glimpses — Photo &amp; Video Editing</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎞%3C/text%3E%3C/svg%3E">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link rel="stylesheet" href="style.css"></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="logo" viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4fa3"/><stop offset=".55" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+<circle cx="32" cy="32" r="29" fill="none" stroke="url(#lg)" stroke-width="4"/>
+<path d="M44 20c-3-4-9-6-14-4-6 2-7 9-2 12l9 4c5 3 4 10-2 12-5 2-11 0-14-4" fill="none" stroke="url(#lg)" stroke-width="5" stroke-linecap="round"/>
+<path d="M26 24l16 8-16 8z" fill="#fff" opacity=".0"/><circle cx="50" cy="14" r="4" fill="#fff"/><path d="M50 8v12M44 14h12" stroke="#fff" stroke-width="1.5"/></symbol></defs></svg>
+
+<nav><div class="brand"><svg width="38" height="38"><use href="#logo"/></svg><span>Sumit Glimpses</span></div>
+<div><a href="#work">Services</a><a href="#how">How it works</a><a class="k" href="#portal">Client Portal</a></div></nav>
+
+<div class="hero"><div>
+<span class="badge b-lock">🎬 Photo &amp; Video Editor</span>
+<h1>Every moment deserves a <em>glimpse</em> that shines.</h1>
+<p class="sub">Cinematic edits, colour grading, reels and photo retouching by Sumit Kumar Shaw. Preview your edit, pay securely by UPI, and unlock the full video instantly.</p>
+<a class="btn" href="#portal">Open my video</a> <a class="btn ghost" href="#work">See services</a></div>
+<div class="stage" id="stage"><div class="orb" style="width:260px;height:260px;background:var(--b)"></div>
+<div class="scene" id="scene"><div class="face f1">🎬</div><div class="face f2">📸</div><div class="face f3">✨</div><div class="face f4">🎞️</div><div class="face f5">🎨</div><div class="face f6">🎧</div></div></div></div>
+
+<section id="samples"><h2>🎞 My editing samples</h2><p class="sub">Scroll — each sample plays as it comes into view. Tap the sound button to hear them.</p>
+<button class="btn snd" id="snd">🔇 Sound off</button>
+<div id="sgrid"></div><p class="msg" id="sempty">Samples are coming soon…</p></section>
+
+<section id="work"><h2>What I create</h2><p class="sub">Hover or touch the cards — they move in 3D.</p>
+<div class="grid">
+<div class="tilt"><span class="ic">🎬</span><h3>Video Editing</h3><p>Weddings, events, YouTube, vlogs with smooth cuts and sound sync.</p></div>
+<div class="tilt"><span class="ic">📱</span><h3>Reels &amp; Shorts</h3><p>Trendy, fast-paced edits with captions and transitions.</p></div>
+<div class="tilt"><span class="ic">🎨</span><h3>Colour Grading</h3><p>Film-look colours that make footage feel premium.</p></div>
+<div class="tilt"><span class="ic">📸</span><h3>Photo Retouching</h3><p>Skin, light, background clean-up and creative composites.</p></div>
+</div></section>
+
+<section id="how"><h2>How it works</h2><p class="sub">Simple for every client.</p>
+<div class="grid">
+<div class="tilt step"><b>1</b><h3>Get your code</h3><p>I send you a private access code after editing.</p></div>
+<div class="tilt step"><b>2</b><h3>Preview 50%</h3><p>Watch the first half of your video free.</p></div>
+<div class="tilt step"><b>3</b><h3>Pay via UPI</h3><p>Scan the QR, pay, and send your transaction ID.</p></div>
+<div class="tilt step"><b>4</b><h3>Unlock &amp; enjoy</h3><p>Get the full video, a thank-you card, and share feedback.</p></div>
+</div></section>
+
+<section id="portal"><div class="portal">
+<h2>🔑 Client Portal</h2><p class="sub">Enter the access code I gave you.</p>
+<div class="row"><input id="code" placeholder="e.g. GLM-4821" autocomplete="off" style="text-transform:uppercase"><button class="btn" id="go">Open</button></div>
+<p class="msg" id="pmsg"></p>
+<div id="view" class="hide">
+<h3 id="vt"></h3> <span class="badge" id="vb"></span>
+<div class="vwrap" id="vw"><video id="vid" playsinline controls controlsList="nodownload noplaybackrate" disablepictureinpicture></video>
+<div class="lock" id="lock"><div style="font-size:42px">🔒</div><b>Preview ended (50%)</b><span class="msg">Pay to unlock the full video.<br>Tap anywhere to replay the preview.</span><a class="btn" href="#paybox" onclick="document.getElementById('paybox').scrollIntoView({behavior:'smooth'})">Unlock now</a></div></div>
+<div id="paybox"><div class="pay"><div id="qr"></div><div>
+<div class="msg">Amount to pay</div><div class="price">₹<span id="amt"></span></div>
+<p class="msg">Scan with PhonePe, Google Pay, Paytm or any UPI app.<br>UPI ID: <b>6295305574@ptyes</b> · Sumit Kumar Shaw</p>
+<a class="btn" id="upilink" style="margin:10px 0">Pay with UPI app</a>
+<input id="utr" placeholder="After paying, enter UPI transaction ID (UTR)">
+<button class="btn ghost" id="sendutr">I have paid</button><p class="msg" id="paymsg"></p></div></div></div>
+<div id="thanks" class="hide">
+<div class="card3d"><div class="gc"><div style="font-size:54px">🎉</div><h3>Thank you, <span id="cn"></span>!</h3><p>Your payment is confirmed. It was a joy creating this for you. Wishing you wonderful memories and many more glimpses to come.</p><p style="margin-top:14px;font-weight:700">— Sumit Glimpses ✨</p></div></div>
+<h3 style="text-align:center">How was your experience?</h3>
+<div class="stars" id="stars"></div>
+<textarea id="fb" rows="3" placeholder="Write your feedback…"></textarea>
+<button class="btn" id="sendfb">Send feedback</button> <button class="btn ghost" id="dl">Download my video</button><p class="msg" id="fbmsg"></p></div>
+</div></div></section>
+
+<footer><div class="brand" style="justify-content:center"><svg width="30" height="30"><use href="#logo"/></svg><span>Sumit Glimpses</span></div>
+<p>© 2026 Sumit Kumar Shaw · UPI 6295305574@ptyes · <a href="admin.html" style="color:var(--mu)">Admin</a></p></footer>
+
+<script src="common.js"></script>
+<script src="client.js"></script></body></html>
