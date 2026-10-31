@@ -13,7 +13,7 @@ in Netlify's built-in storage, so they are always connected.
    (If your Netlify site already exists: Site configuration > Build & deploy > Link repository.)
    NOTE: do NOT use "drag and drop" deploy. It cannot install the backend. Use GitHub.
 3. Open  https://YOUR-SITE.netlify.app/admin.html
-   The first time it asks for the admin Gmail (sumit7797@gmail.com) and asks you to CREATE your admin password. Do this right away,
+   The first time it asks for the admin Gmail (sumitkr7797@gmail.com) and asks you to CREATE your admin password. Do this right away,
    before sharing the link with anyone. After that it is a normal login.
 
 Optional: instead of creating the password on the page, you can set it in

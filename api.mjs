@@ -9,7 +9,7 @@ const meta = () => getStore({ name: "sg-meta", consistency: "strong" });
 const media = () => getStore({ name: "sg-media", consistency: "strong" });
 const enc = new TextEncoder();
 // Only this Gmail can open the admin page (plus the password).
-const ADMIN_EMAIL = ((typeof process !== "undefined" && process.env && process.env.ADMIN_EMAIL) || "sumit7797@gmail.com").trim().toLowerCase();
+const ADMIN_EMAIL = ((typeof process !== "undefined" && process.env && process.env.ADMIN_EMAIL) || "sumitkr7797@gmail.com").trim().toLowerCase();
 const emailOk = (e) => String(e || "").trim().toLowerCase() === ADMIN_EMAIL;
 
 const json = (o, s = 200) =>
