@@ -18,5 +18,5 @@ async function api(path,o={}){
  let r;try{r=await fetch(path,{method:o.method||'GET',headers:h,body,cache:'no-store'})}
  catch(e){const x=new Error('No internet connection. Please try again.');x.status=0;throw x}
  let d={};try{d=await r.json()}catch(e){}
- if(!r.ok){const x=new Error(d.error||('Error '+r.status));x.status=r.status;throw x}
+ if(!r.ok){const nb=!d.error&&(r.status===404||r.status===405);const x=new Error(nb?'This web address cannot run the website backend (github.io). Open your Netlify address that ends with .netlify.app instead.':(d.error||('Error '+r.status)));x.status=nb?0:r.status;throw x}
  return d}
